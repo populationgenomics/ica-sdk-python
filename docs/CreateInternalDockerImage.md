@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_internal_docker_image import CreateInternalDockerImage
+from icasdk.models.create_internal_docker_image import CreateInternalDockerImage
 
 # TODO update the JSON string below
 json = "{}"

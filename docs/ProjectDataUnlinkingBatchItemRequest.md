@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_data_unlinking_batch_item_request import ProjectDataUnlinkingBatchItemRequest
+from icasdk.models.project_data_unlinking_batch_item_request import ProjectDataUnlinkingBatchItemRequest
 
 # TODO update the JSON string below
 json = "{}"

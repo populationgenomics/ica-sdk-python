@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.folder_upload_session import FolderUploadSession
+from icasdk.models.folder_upload_session import FolderUploadSession
 
 # TODO update the JSON string below
 json = "{}"

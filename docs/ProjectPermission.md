@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_permission import ProjectPermission
+from icasdk.models.project_permission import ProjectPermission
 
 # TODO update the JSON string below
 json = "{}"

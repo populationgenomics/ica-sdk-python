@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_data_move_batch_item_query_parameters import ProjectDataMoveBatchItemQueryParameters
+from icasdk.models.project_data_move_batch_item_query_parameters import ProjectDataMoveBatchItemQueryParameters
 
 # TODO update the JSON string below
 json = "{}"

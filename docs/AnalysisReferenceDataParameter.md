@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_reference_data_parameter import AnalysisReferenceDataParameter
+from icasdk.models.analysis_reference_data_parameter import AnalysisReferenceDataParameter
 
 # TODO update the JSON string below
 json = "{}"

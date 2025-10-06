@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.optional_sample_tags import OptionalSampleTags
+from icasdk.models.optional_sample_tags import OptionalSampleTags
 
 # TODO update the JSON string below
 json = "{}"

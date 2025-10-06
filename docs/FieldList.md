@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.field_list import FieldList
+from icasdk.models.field_list import FieldList
 
 # TODO update the JSON string below
 json = "{}"

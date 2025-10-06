@@ -1,4 +1,4 @@
-# openapi_client.DataApi
+# icasdk.DataApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,14 +22,14 @@ Can be used to download a file directly from the region where it is located, no 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.download import Download
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.download import Download
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -39,7 +39,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -50,9 +50,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = icasdk.DataApi(api_client)
     data_urn = 'data_urn_example' # str | The format is urn:ilmn:ica:region:\\<ID of the region\\>:data:\\<ID of the data\\>#\\<optional data path\\>. The path can be omitted, in that case the hashtag (#) must also be omitted.
 
     try:
@@ -108,14 +108,14 @@ Can be used to view a file directly from the region where it is located, no conn
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.inline_view import InlineView
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.inline_view import InlineView
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = icasdk.DataApi(api_client)
     data_urn = 'data_urn_example' # str | The format is urn:ilmn:ica:region:\\<ID of the region\\>:data:\\<ID of the data\\>#\\<optional data path\\>. The path can be omitted, in that case the hashtag (#) must also be omitted.
 
     try:
@@ -192,14 +192,14 @@ Retrieve a data.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.data import Data
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.data import Data
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -209,7 +209,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -220,9 +220,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DataApi(api_client)
+    api_instance = icasdk.DataApi(api_client)
     data_urn = 'data_urn_example' # str | The format is urn:ilmn:ica:region:\\<ID of the region\\>:data:\\<ID of the data\\>#\\<optional data path\\>. The path can be omitted, in that case the hashtag (#) must also be omitted.
 
     try:

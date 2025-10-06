@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.reference_data_type_list import ReferenceDataTypeList
+from icasdk.models.reference_data_type_list import ReferenceDataTypeList
 
 # TODO update the JSON string below
 json = "{}"

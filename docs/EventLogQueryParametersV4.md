@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.event_log_query_parameters_v4 import EventLogQueryParametersV4
+from icasdk.models.event_log_query_parameters_v4 import EventLogQueryParametersV4
 
 # TODO update the JSON string below
 json = "{}"

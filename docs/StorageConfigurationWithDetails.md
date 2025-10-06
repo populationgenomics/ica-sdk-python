@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.storage_configuration_with_details import StorageConfigurationWithDetails
+from icasdk.models.storage_configuration_with_details import StorageConfigurationWithDetails
 
 # TODO update the JSON string below
 json = "{}"

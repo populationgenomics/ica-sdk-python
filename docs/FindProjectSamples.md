@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.find_project_samples import FindProjectSamples
+from icasdk.models.find_project_samples import FindProjectSamples
 
 # TODO update the JSON string below
 json = "{}"

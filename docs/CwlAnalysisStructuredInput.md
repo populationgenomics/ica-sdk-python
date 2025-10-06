@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cwl_analysis_structured_input import CwlAnalysisStructuredInput
+from icasdk.models.cwl_analysis_structured_input import CwlAnalysisStructuredInput
 
 # TODO update the JSON string below
 json = "{}"

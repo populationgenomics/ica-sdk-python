@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_file_and_upload_url import ProjectFileAndUploadUrl
+from icasdk.models.project_file_and_upload_url import ProjectFileAndUploadUrl
 
 # TODO update the JSON string below
 json = "{}"

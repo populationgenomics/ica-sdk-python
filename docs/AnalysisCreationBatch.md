@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_creation_batch import AnalysisCreationBatch
+from icasdk.models.analysis_creation_batch import AnalysisCreationBatch
 
 # TODO update the JSON string below
 json = "{}"

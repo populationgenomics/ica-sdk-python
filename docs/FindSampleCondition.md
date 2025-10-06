@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.find_sample_condition import FindSampleCondition
+from icasdk.models.find_sample_condition import FindSampleCondition
 
 # TODO update the JSON string below
 json = "{}"

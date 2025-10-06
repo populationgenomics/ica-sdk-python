@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_input_data_mount import AnalysisInputDataMount
+from icasdk.models.analysis_input_data_mount import AnalysisInputDataMount
 
 # TODO update the JSON string below
 json = "{}"

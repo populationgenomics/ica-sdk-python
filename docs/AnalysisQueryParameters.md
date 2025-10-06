@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_query_parameters import AnalysisQueryParameters
+from icasdk.models.analysis_query_parameters import AnalysisQueryParameters
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# openapi_client.ProjectApi
+# icasdk.ProjectApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -27,14 +27,14 @@ Change the project owner.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.change_project_owner import ChangeProjectOwner
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.change_project_owner import ChangeProjectOwner
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -44,7 +44,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -55,11 +55,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
-    change_project_owner = openapi_client.ChangeProjectOwner() # ChangeProjectOwner | 
+    change_project_owner = icasdk.ChangeProjectOwner() # ChangeProjectOwner | 
 
     try:
         # Change the project owner.
@@ -111,15 +111,15 @@ Create a new project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.create_project import CreateProject
-from openapi_client.models.project import Project
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.create_project import CreateProject
+from icasdk.models.project import Project
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -129,7 +129,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -140,10 +140,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
-    create_project = openapi_client.CreateProject() # CreateProject | 
+    api_instance = icasdk.ProjectApi(api_client)
+    create_project = icasdk.CreateProject() # CreateProject | 
 
     try:
         # Create a new project.
@@ -196,14 +196,14 @@ Retrieve a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project import Project
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project import Project
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -213,7 +213,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -280,14 +280,14 @@ Retrieve a project bundle.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_bundle import ProjectBundle
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_bundle import ProjectBundle
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -297,7 +297,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -308,9 +308,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
     bundle_id = 'bundle_id_example' # str | 
 
@@ -366,14 +366,14 @@ Retrieve project bundles.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_bundle_list import ProjectBundleList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_bundle_list import ProjectBundleList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -383,7 +383,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -394,9 +394,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -450,14 +450,14 @@ Retrieve a list of projects.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_paged_list import ProjectPagedList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_paged_list import ProjectPagedList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -467,7 +467,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -478,9 +478,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     search = 'search_example' # str | Search (optional)
     user_tags = ['user_tags_example'] # List[str] | User tags to filter on (optional)
     technical_tags = ['technical_tags_example'] # List[str] | Technical tags to filter on (optional)
@@ -552,13 +552,13 @@ Hide a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -568,7 +568,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -579,9 +579,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
 
     try:
@@ -633,14 +633,14 @@ Link a bundle to a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_bundle import ProjectBundle
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_bundle import ProjectBundle
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -650,7 +650,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -661,9 +661,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
     bundle_id = 'bundle_id_example' # str | 
 
@@ -719,13 +719,13 @@ Unlink a bundle from a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -735,7 +735,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -746,9 +746,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
     bundle_id = 'bundle_id_example' # str | 
 
@@ -812,14 +812,14 @@ Fields which can be updated:
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project import Project
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project import Project
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -829,7 +829,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -840,11 +840,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectApi(api_client)
+    api_instance = icasdk.ProjectApi(api_client)
     project_id = 'project_id_example' # str | 
-    project = openapi_client.Project() # Project | 
+    project = icasdk.Project() # Project | 
     if_match = 'if_match_example' # str | Optional header parameter to enable conflict exposure. If the client provides this header, then it must contains the client's most recent value of the 'ETag' response header, and the server will respond with a 409 code if it detects a conflict. If the client does not provide this header, then the server will not do a conflict check, which means that as a client you can override the resource even when the server has a more recent version. (optional)
 
     try:

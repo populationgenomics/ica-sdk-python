@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_bundle import CreateBundle
+from icasdk.models.create_bundle import CreateBundle
 
 # TODO update the JSON string below
 json = "{}"

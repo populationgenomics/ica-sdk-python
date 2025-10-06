@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.pipeline_configuration_parameter import PipelineConfigurationParameter
+from icasdk.models.pipeline_configuration_parameter import PipelineConfigurationParameter
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.event_log_list_v3 import EventLogListV3
+from icasdk.models.event_log_list_v3 import EventLogListV3
 
 # TODO update the JSON string below
 json = "{}"

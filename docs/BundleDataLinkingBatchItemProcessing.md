@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_data_linking_batch_item_processing import BundleDataLinkingBatchItemProcessing
+from icasdk.models.bundle_data_linking_batch_item_processing import BundleDataLinkingBatchItemProcessing
 
 # TODO update the JSON string below
 json = "{}"

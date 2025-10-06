@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.integer_settings import IntegerSettings
+from icasdk.models.integer_settings import IntegerSettings
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.config import Config
+from icasdk.models.config import Config
 
 # TODO update the JSON string below
 json = "{}"

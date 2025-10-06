@@ -1,4 +1,4 @@
-# openapi_client.StorageBundleApi
+# icasdk.StorageBundleApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -18,14 +18,14 @@ Retrieve a list of storage bundles.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_bundle_list import StorageBundleList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_bundle_list import StorageBundleList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -35,7 +35,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -46,9 +46,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageBundleApi(api_client)
+    api_instance = icasdk.StorageBundleApi(api_client)
 
     try:
         # Retrieve a list of storage bundles.

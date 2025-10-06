@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_form_group import InputFormGroup
+from icasdk.models.input_form_group import InputFormGroup
 
 # TODO update the JSON string below
 json = "{}"

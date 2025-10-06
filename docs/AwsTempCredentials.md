@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.aws_temp_credentials import AwsTempCredentials
+from icasdk.models.aws_temp_credentials import AwsTempCredentials
 
 # TODO update the JSON string below
 json = "{}"

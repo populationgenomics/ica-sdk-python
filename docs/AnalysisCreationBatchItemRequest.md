@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_creation_batch_item_request import AnalysisCreationBatchItemRequest
+from icasdk.models.analysis_creation_batch_item_request import AnalysisCreationBatchItemRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_data_unlinking_batch_item_paged_list import ProjectDataUnlinkingBatchItemPagedList
+from icasdk.models.project_data_unlinking_batch_item_paged_list import ProjectDataUnlinkingBatchItemPagedList
 
 # TODO update the JSON string below
 json = "{}"

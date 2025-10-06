@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_form_with_external_data import InputFormWithExternalData
+from icasdk.models.input_form_with_external_data import InputFormWithExternalData
 
 # TODO update the JSON string below
 json = "{}"

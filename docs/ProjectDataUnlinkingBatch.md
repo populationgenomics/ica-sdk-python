@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_data_unlinking_batch import ProjectDataUnlinkingBatch
+from icasdk.models.project_data_unlinking_batch import ProjectDataUnlinkingBatch
 
 # TODO update the JSON string below
 json = "{}"

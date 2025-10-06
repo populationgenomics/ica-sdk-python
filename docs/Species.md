@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.species import Species
+from icasdk.models.species import Species
 
 # TODO update the JSON string below
 json = "{}"

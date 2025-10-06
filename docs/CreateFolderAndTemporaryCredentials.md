@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_folder_and_temporary_credentials import CreateFolderAndTemporaryCredentials
+from icasdk.models.create_folder_and_temporary_credentials import CreateFolderAndTemporaryCredentials
 
 # TODO update the JSON string below
 json = "{}"

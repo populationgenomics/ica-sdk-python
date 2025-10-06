@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_data_linking_batch_item import BundleDataLinkingBatchItem
+from icasdk.models.bundle_data_linking_batch_item import BundleDataLinkingBatchItem
 
 # TODO update the JSON string below
 json = "{}"

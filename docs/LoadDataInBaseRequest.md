@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.load_data_in_base_request import LoadDataInBaseRequest
+from icasdk.models.load_data_in_base_request import LoadDataInBaseRequest
 
 # TODO update the JSON string below
 json = "{}"

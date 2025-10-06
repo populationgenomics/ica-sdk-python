@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cwl_git_config import CwlGitConfig
+from icasdk.models.cwl_git_config import CwlGitConfig
 
 # TODO update the JSON string below
 json = "{}"

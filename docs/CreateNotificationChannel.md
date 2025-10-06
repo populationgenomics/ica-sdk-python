@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_notification_channel import CreateNotificationChannel
+from icasdk.models.create_notification_channel import CreateNotificationChannel
 
 # TODO update the JSON string below
 json = "{}"

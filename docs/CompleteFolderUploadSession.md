@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.complete_folder_upload_session import CompleteFolderUploadSession
+from icasdk.models.complete_folder_upload_session import CompleteFolderUploadSession
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_url_with_path import DataUrlWithPath
+from icasdk.models.data_url_with_path import DataUrlWithPath
 
 # TODO update the JSON string below
 json = "{}"

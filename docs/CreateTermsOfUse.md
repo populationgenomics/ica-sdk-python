@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_terms_of_use import CreateTermsOfUse
+from icasdk.models.create_terms_of_use import CreateTermsOfUse
 
 # TODO update the JSON string below
 json = "{}"

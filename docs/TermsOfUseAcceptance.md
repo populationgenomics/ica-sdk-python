@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.terms_of_use_acceptance import TermsOfUseAcceptance
+from icasdk.models.terms_of_use_acceptance import TermsOfUseAcceptance
 
 # TODO update the JSON string below
 json = "{}"

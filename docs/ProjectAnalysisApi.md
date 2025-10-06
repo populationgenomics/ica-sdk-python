@@ -1,4 +1,4 @@
-# openapi_client.ProjectAnalysisApi
+# icasdk.ProjectAnalysisApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -41,13 +41,13 @@ Endpoint for aborting an analysis. The status of the analysis is not updated imm
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -57,7 +57,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -68,9 +68,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to abort
 
@@ -135,15 +135,15 @@ For this endpoint multiple versions exist. Note that the values for request head
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_cwl_analysis import CreateCwlAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_cwl_analysis import CreateCwlAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -153,7 +153,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -164,11 +164,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_cwl_analysis = openapi_client.CreateCwlAnalysis() # CreateCwlAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_cwl_analysis = icasdk.CreateCwlAnalysis() # CreateCwlAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -226,15 +226,15 @@ This endpoint is intended to be used with an input.json and will bypass the inpu
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_cwl_with_json_input_analysis import CreateCwlWithJsonInputAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_cwl_with_json_input_analysis import CreateCwlWithJsonInputAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -244,7 +244,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -255,11 +255,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_cwl_with_json_input_analysis = openapi_client.CreateCwlWithJsonInputAnalysis() # CreateCwlWithJsonInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_cwl_with_json_input_analysis = icasdk.CreateCwlWithJsonInputAnalysis() # CreateCwlWithJsonInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -315,15 +315,15 @@ Create and start an analysis for a CWL pipeline with a structured input.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_cwl_with_structured_input_analysis import CreateCwlWithStructuredInputAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_cwl_with_structured_input_analysis import CreateCwlWithStructuredInputAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -333,7 +333,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -344,11 +344,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_cwl_with_structured_input_analysis = openapi_client.CreateCwlWithStructuredInputAnalysis() # CreateCwlWithStructuredInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_cwl_with_structured_input_analysis = icasdk.CreateCwlWithStructuredInputAnalysis() # CreateCwlWithStructuredInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -404,15 +404,15 @@ Create and start an analysis for a JSON based CWL pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_cwl_json_analysis import CreateCwlJsonAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_cwl_json_analysis import CreateCwlJsonAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -422,7 +422,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -433,11 +433,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_cwl_json_analysis = openapi_client.CreateCwlJsonAnalysis() # CreateCwlJsonAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_cwl_json_analysis = icasdk.CreateCwlJsonAnalysis() # CreateCwlJsonAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -504,15 +504,15 @@ For this endpoint multiple versions exist. Note that the values for request head
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_nextflow_analysis import CreateNextflowAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_nextflow_analysis import CreateNextflowAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -522,7 +522,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -533,11 +533,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_nextflow_analysis = openapi_client.CreateNextflowAnalysis() # CreateNextflowAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_nextflow_analysis = icasdk.CreateNextflowAnalysis() # CreateNextflowAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -595,15 +595,15 @@ This endpoint is intended to be used with a custom input and will bypass the inp
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_nextflow_with_custom_input_analysis import CreateNextflowWithCustomInputAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_nextflow_with_custom_input_analysis import CreateNextflowWithCustomInputAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -613,7 +613,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -624,11 +624,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_nextflow_with_custom_input_analysis = openapi_client.CreateNextflowWithCustomInputAnalysis() # CreateNextflowWithCustomInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_nextflow_with_custom_input_analysis = icasdk.CreateNextflowWithCustomInputAnalysis() # CreateNextflowWithCustomInputAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -684,15 +684,15 @@ Create and start an analysis for a JSON based Nextflow pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.models.create_nextflow_json_analysis import CreateNextflowJsonAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.models.create_nextflow_json_analysis import CreateNextflowJsonAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -702,7 +702,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -713,11 +713,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_nextflow_json_analysis = openapi_client.CreateNextflowJsonAnalysis() # CreateNextflowJsonAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
+    create_nextflow_json_analysis = icasdk.CreateNextflowJsonAnalysis() # CreateNextflowJsonAnalysis | The following options can be used for actionOnExist:<br /><ul><li>Overwrite (default): If a file with that name already exists, it is overwritten.</li><li>Rename: If a file with that name already exists, an incremental counter is appended to the file name.</li><li>Skip: If a file with that name already exists, the new file is not saved and the data is discarded.</li></ul>
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -775,14 +775,14 @@ This endpoint only returns V3 items. Use the search endpoint to get V4 items.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_paged_list_v3 import AnalysisPagedListV3
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_paged_list_v3 import AnalysisPagedListV3
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -792,7 +792,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -803,9 +803,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     reference = 'reference_example' # str | The reference to filter on. (optional)
     userreference = 'userreference_example' # str | The user-reference to filter on. (optional)
@@ -890,14 +890,14 @@ For this endpoint multiple versions exist. Note that the values for request head
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -907,7 +907,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -918,9 +918,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve
 
@@ -976,14 +976,14 @@ Retrieve the configurations of an analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.execution_configuration_list import ExecutionConfigurationList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.execution_configuration_list import ExecutionConfigurationList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -993,7 +993,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1004,9 +1004,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the configuration for
 
@@ -1062,14 +1062,14 @@ Retrieve the inputs of an analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_input_list import AnalysisInputList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_input_list import AnalysisInputList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1079,7 +1079,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1090,9 +1090,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the inputs for
 
@@ -1148,14 +1148,14 @@ Retrieve the outputs of an analysis (limited to the first 200.000 files per outp
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_output_list import AnalysisOutputList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_output_list import AnalysisOutputList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1165,7 +1165,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1176,9 +1176,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the outputs for
 
@@ -1236,14 +1236,14 @@ Retrieves the reports which match the report config defined in a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_report_entry_list import AnalysisReportEntryList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_report_entry_list import AnalysisReportEntryList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1253,7 +1253,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1264,9 +1264,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the reports for
 
@@ -1322,14 +1322,14 @@ Retrieve the individual steps of an analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_step_list import AnalysisStepList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_step_list import AnalysisStepList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1339,7 +1339,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1350,9 +1350,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the individual steps for
 
@@ -1410,14 +1410,14 @@ The usage details can be retrieved once the analysis has completed with status S
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_usage_details import AnalysisUsageDetails
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_usage_details import AnalysisUsageDetails
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1427,7 +1427,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1438,9 +1438,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the usage details for
 
@@ -1496,14 +1496,14 @@ Retrieve the input json of a CWL analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cwl_analysis_input_json import CwlAnalysisInputJson
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.cwl_analysis_input_json import CwlAnalysisInputJson
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1513,7 +1513,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1524,9 +1524,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the CWL analysis for which to retrieve the input json
 
@@ -1582,14 +1582,14 @@ Retrieve the output json of a CWL analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cwl_analysis_output_json import CwlAnalysisOutputJson
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.cwl_analysis_output_json import CwlAnalysisOutputJson
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1599,7 +1599,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1610,9 +1610,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the CWL analysis for which to retrieve the output json
 
@@ -1670,14 +1670,14 @@ Retrieve the values from an input form of a JSON based pipeline used to start an
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_form_field_list import InputFormFieldList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.input_form_field_list import InputFormFieldList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1687,7 +1687,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1698,9 +1698,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis to retrieve the input form values from
 
@@ -1756,14 +1756,14 @@ Retrieve the raw output of an analysis.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_raw_output import AnalysisRawOutput
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_raw_output import AnalysisRawOutput
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1773,7 +1773,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1784,9 +1784,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | The ID of the analysis for which to retrieve the raw output
 
@@ -1842,15 +1842,15 @@ Search analyses.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_paged_list_v4 import AnalysisPagedListV4
-from openapi_client.models.analysis_query_parameters import AnalysisQueryParameters
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_paged_list_v4 import AnalysisPagedListV4
+from icasdk.models.analysis_query_parameters import AnalysisQueryParameters
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1860,7 +1860,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1871,15 +1871,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     page_offset = 'page_offset_example' # str | [only use with offset-based paging]<br>The amount of rows to skip in the result. Ideally this is a multiple of the size parameter. Offset-based pagination has a result limit of 200K rows and does not guarantee unique results across pages (optional)
     page_token = 'page_token_example' # str | [only use with cursor-based paging]<br>The cursor to get subsequent results. The value to use is returned in the result when using cursor-based pagination. Cursor-based pagination guarantees complete and unique results across all pages. (optional)
     page_size = 'page_size_example' # str | [can be used with both offset- and cursor-based paging]<br>The amount of rows to return. Use in combination with the offset (when using offset-based pagination) or cursor (when using cursor-based pagination) parameter to get subsequent results (optional)
     sort = 'sort_example' # str | [only use with offset-based paging]<br>Which field to order the results by. The default order is ascending, suffix with ' desc' to sort descending (suffix ' asc' also works for ascending). Multiple values should be separated with commas. An example: \"?sort=sortAttribute1, sortAttribute2 desc\"  The attributes for which sorting is supported: - reference - userReference - pipeline - status - startDate - endDate - summary  (optional)
-    analysis_query_parameters = openapi_client.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
+    analysis_query_parameters = icasdk.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
 
     try:
         # Search analyses.
@@ -1950,14 +1950,14 @@ For this endpoint multiple versions exist. Note that the values for request head
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_v4 import AnalysisV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_v4 import AnalysisV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1967,7 +1967,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1978,12 +1978,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisApi(api_client)
+    api_instance = icasdk.ProjectAnalysisApi(api_client)
     project_id = 'project_id_example' # str | 
     analysis_id = 'analysis_id_example' # str | 
-    analysis_v4 = openapi_client.AnalysisV4() # AnalysisV4 | 
+    analysis_v4 = icasdk.AnalysisV4() # AnalysisV4 | 
     if_match = 'if_match_example' # str | Optional header parameter to enable conflict exposure. If the client provides this header, then it must contains the client's most recent value of the 'ETag' response header, and the server will respond with a 409 code if it detects a conflict. If the client does not provide this header, then the server will not do a conflict check, which means that as a client you can override the resource even when the server has a more recent version. (optional)
 
     try:

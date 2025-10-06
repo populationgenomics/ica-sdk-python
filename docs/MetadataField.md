@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.metadata_field import MetadataField
+from icasdk.models.metadata_field import MetadataField
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.nextflow_analysis_with_custom_input import NextflowAnalysisWithCustomInput
+from icasdk.models.nextflow_analysis_with_custom_input import NextflowAnalysisWithCustomInput
 
 # TODO update the JSON string below
 json = "{}"

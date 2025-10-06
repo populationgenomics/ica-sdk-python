@@ -1,4 +1,4 @@
-# openapi_client.ProjectPipelineApi
+# icasdk.ProjectPipelineApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -53,14 +53,14 @@ Create an additional input form file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_file import PipelineFile
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_file import PipelineFile
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -70,7 +70,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -81,9 +81,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to create a file for
     content = None # bytearray | 
@@ -141,17 +141,17 @@ Create a JSON based CWL pipeline within a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.links import Links
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.project_pipeline_v4 import ProjectPipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.links import Links
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.project_pipeline_v4 import ProjectPipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -161,7 +161,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -172,9 +172,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the CWL pipeline
     description = 'description_example' # str | The description of the CWL pipeline
@@ -186,13 +186,13 @@ with openapi_client.ApiClient(configuration) as api_client:
     on_submit_file = None # bytearray | A file that will submit the current state of the input form. (optional)
     other_input_form_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a JSON based CWL pipeline within a project.
@@ -262,18 +262,18 @@ Create a JSON based CWL pipeline within a project from Git.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cwl_git_config import CwlGitConfig
-from openapi_client.models.links import Links
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.project_pipeline_v4 import ProjectPipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.cwl_git_config import CwlGitConfig
+from icasdk.models.links import Links
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.project_pipeline_v4 import ProjectPipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -283,7 +283,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -294,26 +294,26 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the CWL pipeline
     description = 'description_example' # str | The description of the CWL pipeline
     input_form_file = None # bytearray | The JSON based input form.
     analysis_storage_id = 'analysis_storage_id_example' # str | The id of the storage to use for the pipeline.
-    cwl_git_config = openapi_client.CwlGitConfig() # CwlGitConfig | 
+    cwl_git_config = icasdk.CwlGitConfig() # CwlGitConfig | 
     on_render_file = None # bytearray | A file that will render the current state of the input form. (optional)
     on_submit_file = None # bytearray | A file that will submit the current state of the input form. (optional)
     other_input_form_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a JSON based CWL pipeline within a project from Git.
@@ -382,17 +382,17 @@ Create a CWL pipeline within a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.links import Links
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.project_pipeline import ProjectPipeline
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.links import Links
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.project_pipeline import ProjectPipeline
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -402,7 +402,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -413,9 +413,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the CWL pipeline
     description = 'description_example' # str | The description of the CWL pipeline
@@ -424,13 +424,13 @@ with openapi_client.ApiClient(configuration) as api_client:
     analysis_storage_id = 'analysis_storage_id_example' # str | The id of the storage to use for the pipeline.
     tool_cwl_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a CWL pipeline within a project.
@@ -497,17 +497,17 @@ Create a JSON based Nextflow pipeline within a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.links import Links
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.pipeline_v4 import PipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.links import Links
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.pipeline_v4 import PipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -517,7 +517,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -528,9 +528,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the pipeline
     description = 'description_example' # str | The description of the pipeline
@@ -544,13 +544,13 @@ with openapi_client.ApiClient(configuration) as api_client:
     on_submit_file = None # bytearray | A file that will submit the current state of the input form. (optional)
     other_input_form_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a JSON based Nextflow pipeline within a project.
@@ -622,18 +622,18 @@ Create a JSON based Nextflow pipeline within a project from Git.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.links import Links
-from openapi_client.models.nextflow_git_config import NextflowGitConfig
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.pipeline_v4 import PipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.links import Links
+from icasdk.models.nextflow_git_config import NextflowGitConfig
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.pipeline_v4 import PipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -643,7 +643,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -654,27 +654,27 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the pipeline
     description = 'description_example' # str | The description of the pipeline
     input_form_file = None # bytearray | The JSON based input form.
     analysis_storage_id = 'analysis_storage_id_example' # str | The id of the storage to use for the pipeline.
-    nextflow_git_config = openapi_client.NextflowGitConfig() # NextflowGitConfig | 
+    nextflow_git_config = icasdk.NextflowGitConfig() # NextflowGitConfig | 
     pipeline_language_version_id = 'pipeline_language_version_id_example' # str | The id of the Nextflow version to use for the pipeline. (optional)
     on_render_file = None # bytearray | A file that will render the current state of the input form. (optional)
     on_submit_file = None # bytearray | A file that will submit the current state of the input form. (optional)
     other_input_form_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a JSON based Nextflow pipeline within a project from Git.
@@ -744,17 +744,17 @@ Create a Nextflow pipeline within a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.links import Links
-from openapi_client.models.pipeline_report_config import PipelineReportConfig
-from openapi_client.models.pipeline_resources import PipelineResources
-from openapi_client.models.project_pipeline import ProjectPipeline
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.links import Links
+from icasdk.models.pipeline_report_config import PipelineReportConfig
+from icasdk.models.pipeline_resources import PipelineResources
+from icasdk.models.project_pipeline import ProjectPipeline
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -764,7 +764,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -775,9 +775,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     code = 'code_example' # str | The code of the pipeline
     description = 'description_example' # str | The description of the pipeline
@@ -788,13 +788,13 @@ with openapi_client.ApiClient(configuration) as api_client:
     nextflow_config_file = None # bytearray | The Nextflow config file. (optional)
     other_nextflow_files = None # List[bytearray] |  (optional)
     metadata_model_file = None # bytearray | The metadata model json file(contents can be retrieved from the controlplane). (optional)
-    links = openapi_client.Links() # Links |  (optional)
+    links = icasdk.Links() # Links |  (optional)
     version_comment = 'version_comment_example' # str |  (optional)
     categories = ['categories_example'] # List[Optional[str]] |  (optional)
     html_documentation = 'html_documentation_example' # str |  (optional)
     proprietary = False # bool | A boolean which indicates if the code of this pipeline is proprietary (optional) (default to False)
-    report_configs = openapi_client.PipelineReportConfig() # PipelineReportConfig |  (optional)
-    resources = openapi_client.PipelineResources() # PipelineResources |  (optional)
+    report_configs = icasdk.PipelineReportConfig() # PipelineReportConfig |  (optional)
+    resources = icasdk.PipelineResources() # PipelineResources |  (optional)
 
     try:
         # Create a Nextflow pipeline within a project.
@@ -863,14 +863,14 @@ Create a file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_file import PipelineFile
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_file import PipelineFile
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -880,7 +880,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -891,9 +891,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to create a file for
     content = None # bytearray | 
@@ -951,13 +951,13 @@ Delete an additional input form file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -967,7 +967,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -978,9 +978,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to delete an additional file for
     file_id = 'file_id_example' # str | The ID of the pipeline file
@@ -1036,13 +1036,13 @@ Delete a file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1052,7 +1052,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1063,9 +1063,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to delete a file for
     file_id = 'file_id_example' # str | The ID of the pipeline file
@@ -1121,13 +1121,13 @@ Download the contents of an additional input form file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1137,7 +1137,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1148,9 +1148,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the additional file for
     file_id = 'file_id_example' # str | The ID of the additional file
@@ -1208,13 +1208,13 @@ Download the contents of the input form file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1224,7 +1224,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1235,9 +1235,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the input form file for
 
@@ -1293,13 +1293,13 @@ Download the contents of the onRender file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1309,7 +1309,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1320,9 +1320,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the onRender file for
 
@@ -1378,13 +1378,13 @@ Download the contents of the onSubmit file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1394,7 +1394,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1405,9 +1405,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the onSubmit file for
 
@@ -1463,13 +1463,13 @@ Download the contents of a pipeline file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1479,7 +1479,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1490,9 +1490,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve files for
     file_id = 'file_id_example' # str | The ID of the pipeline file
@@ -1552,14 +1552,14 @@ Retrieves a project pipeline. This can be a pipeline from a linked bundle or an 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_pipeline_v4 import ProjectPipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_pipeline_v4 import ProjectPipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1569,7 +1569,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1580,9 +1580,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve
 
@@ -1638,14 +1638,14 @@ Retrieve additional input form files for a project pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_file_list import PipelineFileList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_file_list import PipelineFileList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1655,7 +1655,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1666,9 +1666,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve files for
 
@@ -1726,14 +1726,14 @@ The pipeline can originate from a linked bundle.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_configuration_parameter_list import PipelineConfigurationParameterList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_configuration_parameter_list import PipelineConfigurationParameterList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1743,7 +1743,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1754,9 +1754,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve input parameters for
 
@@ -1812,14 +1812,14 @@ Retrieve git config for a CWL project pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cwl_git_config import CwlGitConfig
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.cwl_git_config import CwlGitConfig
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1829,7 +1829,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1840,9 +1840,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the git config for
 
@@ -1898,14 +1898,14 @@ Retrieve files for a project pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_file_list import PipelineFileList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_file_list import PipelineFileList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -1915,7 +1915,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -1926,9 +1926,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve files for
 
@@ -1986,14 +1986,14 @@ Retrieve HTML documentation for a project pipeline. This can be a pipeline from 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_html_documentation import PipelineHtmlDocumentation
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_html_documentation import PipelineHtmlDocumentation
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2003,7 +2003,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2014,9 +2014,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve HTML documentation from
 
@@ -2074,14 +2074,14 @@ The pipeline can originate from a linked bundle.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.input_parameter_list import InputParameterList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.input_parameter_list import InputParameterList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2091,7 +2091,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2102,9 +2102,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve input parameters for
 
@@ -2160,14 +2160,14 @@ Retrieve git config for a Nextflow project pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.nextflow_git_config import NextflowGitConfig
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.nextflow_git_config import NextflowGitConfig
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2177,7 +2177,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2188,9 +2188,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to retrieve the git config for
 
@@ -2248,14 +2248,14 @@ Retrieve the reference sets of a project pipeline. This can be a pipeline from a
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.reference_set_list import ReferenceSetList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.reference_set_list import ReferenceSetList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2265,7 +2265,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2276,9 +2276,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the pipeline to retrieve reference sets for
 
@@ -2336,14 +2336,14 @@ Lists all pipelines that are available to the project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_pipeline_list import ProjectPipelineList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_pipeline_list import ProjectPipelineList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2353,7 +2353,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2364,9 +2364,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project to retrieve pipelines for
 
     try:
@@ -2420,13 +2420,13 @@ Link a pipeline to a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2436,7 +2436,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2447,9 +2447,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the pipeline
 
@@ -2503,13 +2503,13 @@ Release a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2519,7 +2519,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2530,9 +2530,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the pipeline
 
@@ -2586,13 +2586,13 @@ Unlink a pipeline from a project.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2602,7 +2602,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2613,9 +2613,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the pipeline
 
@@ -2669,13 +2669,13 @@ Update the contents of an additional input form file.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2685,7 +2685,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2696,9 +2696,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update the additional file for
     file_id = 'file_id_example' # str | The ID of the additional file
@@ -2756,15 +2756,15 @@ Update git config for CWL
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.cwl_git_config import CwlGitConfig
-from openapi_client.models.update_cwl_git_config import UpdateCwlGitConfig
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.cwl_git_config import CwlGitConfig
+from icasdk.models.update_cwl_git_config import UpdateCwlGitConfig
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2774,7 +2774,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2785,12 +2785,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline for which to update the git config.
-    update_cwl_git_config = openapi_client.UpdateCwlGitConfig() # UpdateCwlGitConfig | 
+    update_cwl_git_config = icasdk.UpdateCwlGitConfig() # UpdateCwlGitConfig | 
 
     try:
         # Update git config for CWL
@@ -2853,15 +2853,15 @@ Attributes which can be updated:
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.pipeline_update import PipelineUpdate
-from openapi_client.models.pipeline_v4 import PipelineV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.pipeline_update import PipelineUpdate
+from icasdk.models.pipeline_v4 import PipelineV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2871,7 +2871,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2882,12 +2882,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update
-    pipeline_update = openapi_client.PipelineUpdate() # PipelineUpdate | 
+    pipeline_update = icasdk.PipelineUpdate() # PipelineUpdate | 
 
     try:
         # Update the general attributes of a project pipeline.
@@ -2942,13 +2942,13 @@ Update the contents of the input form file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -2958,7 +2958,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -2969,9 +2969,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update a file for
     content = None # bytearray | 
@@ -3027,15 +3027,15 @@ Update git config for Nextflow
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.nextflow_git_config import NextflowGitConfig
-from openapi_client.models.update_nextflow_git_config import UpdateNextflowGitConfig
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.nextflow_git_config import NextflowGitConfig
+from icasdk.models.update_nextflow_git_config import UpdateNextflowGitConfig
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -3045,7 +3045,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -3056,12 +3056,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline for which to update the git config.
-    update_nextflow_git_config = openapi_client.UpdateNextflowGitConfig() # UpdateNextflowGitConfig | 
+    update_nextflow_git_config = icasdk.UpdateNextflowGitConfig() # UpdateNextflowGitConfig | 
 
     try:
         # Update git config for Nextflow
@@ -3116,13 +3116,13 @@ Update the contents of the onRender file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -3132,7 +3132,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -3143,9 +3143,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update the onRender file for
     content = None # bytearray | 
@@ -3201,13 +3201,13 @@ Update the contents of the onSubmit file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -3217,7 +3217,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -3228,9 +3228,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update the onSubmit file for
     content = None # bytearray | 
@@ -3286,13 +3286,13 @@ Update the contents of a file for a pipeline.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -3302,7 +3302,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -3313,9 +3313,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectPipelineApi(api_client)
+    api_instance = icasdk.ProjectPipelineApi(api_client)
     project_id = 'project_id_example' # str | 
     pipeline_id = 'pipeline_id_example' # str | The ID of the project pipeline to update a file for
     file_id = 'file_id_example' # str | The ID of the pipeline file

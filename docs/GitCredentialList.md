@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.git_credential_list import GitCredentialList
+from icasdk.models.git_credential_list import GitCredentialList
 
 # TODO update the JSON string below
 json = "{}"

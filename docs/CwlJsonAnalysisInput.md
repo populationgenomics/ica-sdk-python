@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cwl_json_analysis_input import CwlJsonAnalysisInput
+from icasdk.models.cwl_json_analysis_input import CwlJsonAnalysisInput
 
 # TODO update the JSON string below
 json = "{}"

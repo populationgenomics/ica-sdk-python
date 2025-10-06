@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_transfer import DataTransfer
+from icasdk.models.data_transfer import DataTransfer
 
 # TODO update the JSON string below
 json = "{}"

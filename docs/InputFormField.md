@@ -34,7 +34,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_form_field import InputFormField
+from icasdk.models.input_form_field import InputFormField
 
 # TODO update the JSON string below
 json = "{}"

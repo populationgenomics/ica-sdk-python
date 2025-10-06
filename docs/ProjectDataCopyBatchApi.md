@@ -1,4 +1,4 @@
-# openapi_client.ProjectDataCopyBatchApi
+# icasdk.ProjectDataCopyBatchApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -21,15 +21,15 @@ Create a project data copy batch.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.create_project_data_copy_batch import CreateProjectDataCopyBatch
-from openapi_client.models.project_data_copy_batch import ProjectDataCopyBatch
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.create_project_data_copy_batch import CreateProjectDataCopyBatch
+from icasdk.models.project_data_copy_batch import ProjectDataCopyBatch
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -39,7 +39,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -50,11 +50,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataCopyBatchApi(api_client)
+    api_instance = icasdk.ProjectDataCopyBatchApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project to which the data will be copied
-    create_project_data_copy_batch = openapi_client.CreateProjectDataCopyBatch() # CreateProjectDataCopyBatch | 
+    create_project_data_copy_batch = icasdk.CreateProjectDataCopyBatch() # CreateProjectDataCopyBatch | 
 
     try:
         # Create a project data copy batch.
@@ -108,14 +108,14 @@ Retrieve a project data copy batch.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_data_copy_batch import ProjectDataCopyBatch
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_data_copy_batch import ProjectDataCopyBatch
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataCopyBatchApi(api_client)
+    api_instance = icasdk.ProjectDataCopyBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | 
 
@@ -194,14 +194,14 @@ Retrieve a project data copy batch item.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_data_copy_batch_item import ProjectDataCopyBatchItem
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_data_copy_batch_item import ProjectDataCopyBatchItem
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -211,7 +211,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -222,9 +222,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataCopyBatchApi(api_client)
+    api_instance = icasdk.ProjectDataCopyBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | 
     item_id = 'item_id_example' # str | 
@@ -282,14 +282,14 @@ Retrieve a list of project data copy batch items.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.project_data_copy_batch_item_paged_list import ProjectDataCopyBatchItemPagedList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.project_data_copy_batch_item_paged_list import ProjectDataCopyBatchItemPagedList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -299,7 +299,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -310,9 +310,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataCopyBatchApi(api_client)
+    api_instance = icasdk.ProjectDataCopyBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | 
     status = ['status_example'] # List[str] | The statuses to filter on. (optional)

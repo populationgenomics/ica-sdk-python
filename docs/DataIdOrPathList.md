@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_id_or_path_list import DataIdOrPathList
+from icasdk.models.data_id_or_path_list import DataIdOrPathList
 
 # TODO update the JSON string below
 json = "{}"

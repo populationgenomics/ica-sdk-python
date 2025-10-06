@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_sample_creation_batch_data_item import CreateSampleCreationBatchDataItem
+from icasdk.models.create_sample_creation_batch_data_item import CreateSampleCreationBatchDataItem
 
 # TODO update the JSON string below
 json = "{}"

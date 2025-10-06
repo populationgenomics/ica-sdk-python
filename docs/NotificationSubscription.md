@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.notification_subscription import NotificationSubscription
+from icasdk.models.notification_subscription import NotificationSubscription
 
 # TODO update the JSON string below
 json = "{}"

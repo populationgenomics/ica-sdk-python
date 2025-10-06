@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.nextflow_json_analysis_input import NextflowJsonAnalysisInput
+from icasdk.models.nextflow_json_analysis_input import NextflowJsonAnalysisInput
 
 # TODO update the JSON string below
 json = "{}"

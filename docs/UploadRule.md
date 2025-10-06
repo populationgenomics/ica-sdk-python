@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.upload_rule import UploadRule
+from icasdk.models.upload_rule import UploadRule
 
 # TODO update the JSON string below
 json = "{}"

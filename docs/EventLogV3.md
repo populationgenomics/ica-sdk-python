@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.event_log_v3 import EventLogV3
+from icasdk.models.event_log_v3 import EventLogV3
 
 # TODO update the JSON string below
 json = "{}"

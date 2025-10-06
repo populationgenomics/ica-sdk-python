@@ -1,4 +1,4 @@
-# openapi_client.StorageConfigurationApi
+# icasdk.StorageConfigurationApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -23,15 +23,15 @@ Create a new storage configuration
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.create_storage_configuration import CreateStorageConfiguration
-from openapi_client.models.storage_configuration import StorageConfiguration
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.create_storage_configuration import CreateStorageConfiguration
+from icasdk.models.storage_configuration import StorageConfiguration
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -41,7 +41,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -52,10 +52,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
-    create_storage_configuration = openapi_client.CreateStorageConfiguration() # CreateStorageConfiguration | 
+    api_instance = icasdk.StorageConfigurationApi(api_client)
+    create_storage_configuration = icasdk.CreateStorageConfiguration() # CreateStorageConfiguration | 
 
     try:
         # Create a new storage configuration
@@ -108,14 +108,14 @@ Retrieve a storage configuration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_configuration import StorageConfiguration
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_configuration import StorageConfiguration
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
+    api_instance = icasdk.StorageConfigurationApi(api_client)
     storage_configuration_id = 'storage_configuration_id_example' # str | The ID of the storage configuration to retrieve
 
     try:
@@ -192,14 +192,14 @@ Retrieve a storage configuration detail.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_configuration_details import StorageConfigurationDetails
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_configuration_details import StorageConfigurationDetails
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -209,7 +209,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -220,9 +220,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
+    api_instance = icasdk.StorageConfigurationApi(api_client)
     storage_configuration_id = 'storage_configuration_id_example' # str | The ID of the storage configuration to retrieve
 
     try:
@@ -276,14 +276,14 @@ Retrieve a list of storage configurations.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_configuration_with_details_list import StorageConfigurationWithDetailsList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_configuration_with_details_list import StorageConfigurationWithDetailsList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -293,7 +293,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -304,9 +304,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
+    api_instance = icasdk.StorageConfigurationApi(api_client)
 
     try:
         # Retrieve a list of storage configurations.
@@ -358,13 +358,13 @@ Here you share your own storage configuration with all the other users in your t
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -374,7 +374,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -385,9 +385,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
+    api_instance = icasdk.StorageConfigurationApi(api_client)
     storage_configuration_id = 'storage_configuration_id_example' # str | The ID of the storage configuration to share
 
     try:
@@ -441,13 +441,13 @@ Here you start the validation of your storage configuration.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -457,7 +457,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -468,9 +468,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageConfigurationApi(api_client)
+    api_instance = icasdk.StorageConfigurationApi(api_client)
     storage_configuration_id = 'storage_configuration_id_example' # str | The ID of the storage configuration to validate
 
     try:

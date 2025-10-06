@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_file_and_upload_url import CreateFileAndUploadUrl
+from icasdk.models.create_file_and_upload_url import CreateFileAndUploadUrl
 
 # TODO update the JSON string below
 json = "{}"

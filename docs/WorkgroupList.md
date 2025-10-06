@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.workgroup_list import WorkgroupList
+from icasdk.models.workgroup_list import WorkgroupList
 
 # TODO update the JSON string below
 json = "{}"

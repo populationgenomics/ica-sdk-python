@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cwl_tool_definition_list import CwlToolDefinitionList
+from icasdk.models.cwl_tool_definition_list import CwlToolDefinitionList
 
 # TODO update the JSON string below
 json = "{}"

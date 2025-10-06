@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_parameter_list import InputParameterList
+from icasdk.models.input_parameter_list import InputParameterList
 
 # TODO update the JSON string below
 json = "{}"

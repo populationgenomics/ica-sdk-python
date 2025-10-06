@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_non_indexed_folder import CreateNonIndexedFolder
+from icasdk.models.create_non_indexed_folder import CreateNonIndexedFolder
 
 # TODO update the JSON string below
 json = "{}"

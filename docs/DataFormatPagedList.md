@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_format_paged_list import DataFormatPagedList
+from icasdk.models.data_format_paged_list import DataFormatPagedList
 
 # TODO update the JSON string below
 json = "{}"

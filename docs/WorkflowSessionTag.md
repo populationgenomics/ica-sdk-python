@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.workflow_session_tag import WorkflowSessionTag
+from icasdk.models.workflow_session_tag import WorkflowSessionTag
 
 # TODO update the JSON string below
 json = "{}"

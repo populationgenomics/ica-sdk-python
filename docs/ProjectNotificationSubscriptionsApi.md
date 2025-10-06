@@ -1,4 +1,4 @@
-# openapi_client.ProjectNotificationSubscriptionsApi
+# icasdk.ProjectNotificationSubscriptionsApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,15 +22,15 @@ Create a notification subscription
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.create_notification_subscription import CreateNotificationSubscription
-from openapi_client.models.notification_subscription import NotificationSubscription
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.create_notification_subscription import CreateNotificationSubscription
+from icasdk.models.notification_subscription import NotificationSubscription
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -51,11 +51,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectNotificationSubscriptionsApi(api_client)
+    api_instance = icasdk.ProjectNotificationSubscriptionsApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project
-    create_notification_subscription = openapi_client.CreateNotificationSubscription() # CreateNotificationSubscription | The new subscription
+    create_notification_subscription = icasdk.CreateNotificationSubscription() # CreateNotificationSubscription | The new subscription
 
     try:
         # Create a notification subscription
@@ -109,13 +109,13 @@ Delete a notification subscription
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectNotificationSubscriptionsApi(api_client)
+    api_instance = icasdk.ProjectNotificationSubscriptionsApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project
     subscription_id = 'subscription_id_example' # str | The ID of the notification subscription to delete
 
@@ -192,14 +192,14 @@ Retrieve a notification subscription
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.notification_subscription import NotificationSubscription
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.notification_subscription import NotificationSubscription
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -209,7 +209,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -220,9 +220,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectNotificationSubscriptionsApi(api_client)
+    api_instance = icasdk.ProjectNotificationSubscriptionsApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project
     subscription_id = 'subscription_id_example' # str | The ID of the notification subscription
 
@@ -278,14 +278,14 @@ Retrieve notification subscriptions
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.notification_subscription_list import NotificationSubscriptionList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.notification_subscription_list import NotificationSubscriptionList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -295,7 +295,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -306,9 +306,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectNotificationSubscriptionsApi(api_client)
+    api_instance = icasdk.ProjectNotificationSubscriptionsApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project
 
     try:
@@ -369,14 +369,14 @@ Fields which can be updated:
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.notification_subscription import NotificationSubscription
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.notification_subscription import NotificationSubscription
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -386,7 +386,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -397,12 +397,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectNotificationSubscriptionsApi(api_client)
+    api_instance = icasdk.ProjectNotificationSubscriptionsApi(api_client)
     project_id = 'project_id_example' # str | The ID of the project
     subscription_id = 'subscription_id_example' # str | The ID of the notification subscription to update
-    notification_subscription = openapi_client.NotificationSubscription() # NotificationSubscription | The updated subscription
+    notification_subscription = icasdk.NotificationSubscription() # NotificationSubscription | The updated subscription
     if_match = 'if_match_example' # str | Optional header parameter to enable conflict exposure. If the client provides this header, then it must contains the client's most recent value of the 'ETag' response header, and the server will respond with a 409 code if it detects a conflict. If the client does not provide this header, then the server will not do a conflict check, which means that as a client you can override the resource even when the server has a more recent version. (optional)
 
     try:

@@ -1,4 +1,4 @@
-# openapi_client.EntitledBundleApi
+# icasdk.EntitledBundleApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,13 +22,13 @@ Accept terms of use for an entitled bundle
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -38,7 +38,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -49,9 +49,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitledBundleApi(api_client)
+    api_instance = icasdk.EntitledBundleApi(api_client)
     entitled_bundle_id = 'entitled_bundle_id_example' # str | The ID of the entitled bundle where the terms of use are accepted of.
 
     try:
@@ -103,14 +103,14 @@ Retrieve an entitled bundle.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.bundle import Bundle
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.bundle import Bundle
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -120,7 +120,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -131,9 +131,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitledBundleApi(api_client)
+    api_instance = icasdk.EntitledBundleApi(api_client)
     entitled_bundle_id = 'entitled_bundle_id_example' # str | The ID of the entitled bundle to retrieve
 
     try:
@@ -187,14 +187,14 @@ Retrieve the last version of terms of use for an entitled bundle.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.terms_of_use import TermsOfUse
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.terms_of_use import TermsOfUse
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -204,7 +204,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -215,9 +215,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitledBundleApi(api_client)
+    api_instance = icasdk.EntitledBundleApi(api_client)
     entitled_bundle_id = 'entitled_bundle_id_example' # str | The ID of the entitled bundle of the terms of use to retrieve
 
     try:
@@ -271,14 +271,14 @@ Retrieve the acceptance record for an entitled bundle for the current user.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.terms_of_use_acceptance import TermsOfUseAcceptance
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.terms_of_use_acceptance import TermsOfUseAcceptance
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -288,7 +288,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -299,9 +299,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitledBundleApi(api_client)
+    api_instance = icasdk.EntitledBundleApi(api_client)
     entitled_bundle_id = 'entitled_bundle_id_example' # str | The ID of the entitled bundle of the terms of use acceptance records.
 
     try:
@@ -355,14 +355,14 @@ Retrieve a list of entitled bundles.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.bundle_paged_list import BundlePagedList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.bundle_paged_list import BundlePagedList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -372,7 +372,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -383,9 +383,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitledBundleApi(api_client)
+    api_instance = icasdk.EntitledBundleApi(api_client)
     search = 'search_example' # str | Search (optional)
     user_tags = 'user_tags_example' # str | User tags to filter on (optional)
     technical_tags = 'technical_tags_example' # str | Technical tags to filter on (optional)

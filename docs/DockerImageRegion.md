@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.docker_image_region import DockerImageRegion
+from icasdk.models.docker_image_region import DockerImageRegion
 
 # TODO update the JSON string below
 json = "{}"

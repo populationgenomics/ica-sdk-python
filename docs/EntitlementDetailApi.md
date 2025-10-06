@@ -1,4 +1,4 @@
-# openapi_client.EntitlementDetailApi
+# icasdk.EntitlementDetailApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -23,15 +23,15 @@ Endpoint for searching all matching activation code details for a project and an
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.activation_code_detail_list import ActivationCodeDetailList
-from openapi_client.models.search_matching_activation_codes_for_cwl_analysis import SearchMatchingActivationCodesForCwlAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.activation_code_detail_list import ActivationCodeDetailList
+from icasdk.models.search_matching_activation_codes_for_cwl_analysis import SearchMatchingActivationCodesForCwlAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -41,7 +41,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -52,10 +52,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitlementDetailApi(api_client)
-    search_matching_activation_codes_for_cwl_analysis = openapi_client.SearchMatchingActivationCodesForCwlAnalysis() # SearchMatchingActivationCodesForCwlAnalysis | 
+    api_instance = icasdk.EntitlementDetailApi(api_client)
+    search_matching_activation_codes_for_cwl_analysis = icasdk.SearchMatchingActivationCodesForCwlAnalysis() # SearchMatchingActivationCodesForCwlAnalysis | 
 
     try:
         # Search all matching activation code details for a Cwl pipeline.
@@ -110,15 +110,15 @@ Endpoint for searching all matching activation code details for a project and an
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.activation_code_detail_list import ActivationCodeDetailList
-from openapi_client.models.search_matching_activation_codes_for_nextflow_analysis import SearchMatchingActivationCodesForNextflowAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.activation_code_detail_list import ActivationCodeDetailList
+from icasdk.models.search_matching_activation_codes_for_nextflow_analysis import SearchMatchingActivationCodesForNextflowAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -128,7 +128,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -139,10 +139,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitlementDetailApi(api_client)
-    search_matching_activation_codes_for_nextflow_analysis = openapi_client.SearchMatchingActivationCodesForNextflowAnalysis() # SearchMatchingActivationCodesForNextflowAnalysis | 
+    api_instance = icasdk.EntitlementDetailApi(api_client)
+    search_matching_activation_codes_for_nextflow_analysis = icasdk.SearchMatchingActivationCodesForNextflowAnalysis() # SearchMatchingActivationCodesForNextflowAnalysis | 
 
     try:
         # Search all matching activation code details for a Nextflow pipeline.
@@ -197,15 +197,15 @@ Endpoint for searching the best activation code detail for a project and an anal
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.activation_code_detail import ActivationCodeDetail
-from openapi_client.models.search_matching_activation_codes_for_cwl_analysis import SearchMatchingActivationCodesForCwlAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.activation_code_detail import ActivationCodeDetail
+from icasdk.models.search_matching_activation_codes_for_cwl_analysis import SearchMatchingActivationCodesForCwlAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -215,7 +215,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -226,10 +226,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitlementDetailApi(api_client)
-    search_matching_activation_codes_for_cwl_analysis = openapi_client.SearchMatchingActivationCodesForCwlAnalysis() # SearchMatchingActivationCodesForCwlAnalysis | 
+    api_instance = icasdk.EntitlementDetailApi(api_client)
+    search_matching_activation_codes_for_cwl_analysis = icasdk.SearchMatchingActivationCodesForCwlAnalysis() # SearchMatchingActivationCodesForCwlAnalysis | 
 
     try:
         # Search the best matching activation code detail for Cwl pipeline.
@@ -284,15 +284,15 @@ Endpoint for searching the best activation code details for a project and an ana
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.activation_code_detail import ActivationCodeDetail
-from openapi_client.models.search_matching_activation_codes_for_nextflow_analysis import SearchMatchingActivationCodesForNextflowAnalysis
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.activation_code_detail import ActivationCodeDetail
+from icasdk.models.search_matching_activation_codes_for_nextflow_analysis import SearchMatchingActivationCodesForNextflowAnalysis
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -302,7 +302,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -313,10 +313,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.EntitlementDetailApi(api_client)
-    search_matching_activation_codes_for_nextflow_analysis = openapi_client.SearchMatchingActivationCodesForNextflowAnalysis() # SearchMatchingActivationCodesForNextflowAnalysis | 
+    api_instance = icasdk.EntitlementDetailApi(api_client)
+    search_matching_activation_codes_for_nextflow_analysis = icasdk.SearchMatchingActivationCodesForNextflowAnalysis() # SearchMatchingActivationCodesForNextflowAnalysis | 
 
     try:
         # Search the best matching activation code details for Nextflow pipeline.

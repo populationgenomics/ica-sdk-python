@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bundle_data_paged_list import BundleDataPagedList
+from icasdk.models.bundle_data_paged_list import BundleDataPagedList
 
 # TODO update the JSON string below
 json = "{}"

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.workflow_v3 import WorkflowV3
+from icasdk.models.workflow_v3 import WorkflowV3
 
 # TODO update the JSON string below
 json = "{}"

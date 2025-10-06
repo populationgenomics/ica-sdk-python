@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_v3 import AnalysisV3
+from icasdk.models.analysis_v3 import AnalysisV3
 
 # TODO update the JSON string below
 json = "{}"

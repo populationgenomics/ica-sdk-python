@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.docker_image import DockerImage
+from icasdk.models.docker_image import DockerImage
 
 # TODO update the JSON string below
 json = "{}"

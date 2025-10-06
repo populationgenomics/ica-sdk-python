@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.event_log_v4 import EventLogV4
+from icasdk.models.event_log_v4 import EventLogV4
 
 # TODO update the JSON string below
 json = "{}"

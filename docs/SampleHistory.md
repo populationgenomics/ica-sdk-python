@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.sample_history import SampleHistory
+from icasdk.models.sample_history import SampleHistory
 
 # TODO update the JSON string below
 json = "{}"

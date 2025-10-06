@@ -1,4 +1,4 @@
-# openapi_client.ProjectDataTransferApi
+# icasdk.ProjectDataTransferApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,13 +22,13 @@ Endpoint for aborting a data transfer.This is a non-RESTful endpoint, as the pat
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -38,7 +38,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -49,9 +49,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataTransferApi(api_client)
+    api_instance = icasdk.ProjectDataTransferApi(api_client)
     project_id = 'project_id_example' # str | 
     data_transfer_id = 'data_transfer_id_example' # str | 
 
@@ -105,14 +105,14 @@ Retrieve a data transfer.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.data_transfer import DataTransfer
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.data_transfer import DataTransfer
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -122,7 +122,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -133,9 +133,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataTransferApi(api_client)
+    api_instance = icasdk.ProjectDataTransferApi(api_client)
     project_id = 'project_id_example' # str | 
     data_transfer_id = 'data_transfer_id_example' # str | 
 
@@ -193,14 +193,14 @@ Retrieve a list of data transfers for the current app (session), excluding web b
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.data_transfer_paged_list import DataTransferPagedList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.data_transfer_paged_list import DataTransferPagedList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -210,7 +210,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -221,9 +221,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectDataTransferApi(api_client)
+    api_instance = icasdk.ProjectDataTransferApi(api_client)
     project_id = 'project_id_example' # str | 
     connector = 'connector_example' # str | The ID of the connector to filter on. (optional)
     direction = 'direction_example' # str | The direction to filter on. (optional)

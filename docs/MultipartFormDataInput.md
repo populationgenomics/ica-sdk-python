@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.multipart_form_data_input import MultipartFormDataInput
+from icasdk.models.multipart_form_data_input import MultipartFormDataInput
 
 # TODO update the JSON string below
 json = "{}"

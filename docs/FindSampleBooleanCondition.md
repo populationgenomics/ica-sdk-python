@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.find_sample_boolean_condition import FindSampleBooleanCondition
+from icasdk.models.find_sample_boolean_condition import FindSampleBooleanCondition
 
 # TODO update the JSON string below
 json = "{}"

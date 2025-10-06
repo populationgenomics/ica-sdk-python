@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_form_s3_data_details import InputFormS3DataDetails
+from icasdk.models.input_form_s3_data_details import InputFormS3DataDetails
 
 # TODO update the JSON string below
 json = "{}"

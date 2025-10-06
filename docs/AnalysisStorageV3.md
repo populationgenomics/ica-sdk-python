@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.analysis_storage_v3 import AnalysisStorageV3
+from icasdk.models.analysis_storage_v3 import AnalysisStorageV3
 
 # TODO update the JSON string below
 json = "{}"

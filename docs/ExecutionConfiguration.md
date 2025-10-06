@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.execution_configuration import ExecutionConfiguration
+from icasdk.models.execution_configuration import ExecutionConfiguration
 
 # TODO update the JSON string below
 json = "{}"

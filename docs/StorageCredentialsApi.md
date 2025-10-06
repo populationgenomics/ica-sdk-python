@@ -1,4 +1,4 @@
-# openapi_client.StorageCredentialsApi
+# icasdk.StorageCredentialsApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,15 +22,15 @@ Create a new storage credential
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.create_storage_credential import CreateStorageCredential
-from openapi_client.models.storage_credential import StorageCredential
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.create_storage_credential import CreateStorageCredential
+from icasdk.models.storage_credential import StorageCredential
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -40,7 +40,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -51,10 +51,10 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageCredentialsApi(api_client)
-    create_storage_credential = openapi_client.CreateStorageCredential() # CreateStorageCredential | 
+    api_instance = icasdk.StorageCredentialsApi(api_client)
+    create_storage_credential = icasdk.CreateStorageCredential() # CreateStorageCredential | 
 
     try:
         # Create a new storage credential
@@ -107,14 +107,14 @@ Retrieve a storage credential.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_credential import StorageCredential
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_credential import StorageCredential
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -124,7 +124,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -135,9 +135,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageCredentialsApi(api_client)
+    api_instance = icasdk.StorageCredentialsApi(api_client)
     storage_credential_id = 'storage_credential_id_example' # str | The ID of the storage credential to retrieve
 
     try:
@@ -191,14 +191,14 @@ Retrieve a list of storage credentials.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.storage_credential_list import StorageCredentialList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.storage_credential_list import StorageCredentialList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -208,7 +208,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -219,9 +219,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageCredentialsApi(api_client)
+    api_instance = icasdk.StorageCredentialsApi(api_client)
 
     try:
         # Retrieve a list of storage credentials.
@@ -273,13 +273,13 @@ Here you share your own storage credentials with all the other users in your ten
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -289,7 +289,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -300,9 +300,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageCredentialsApi(api_client)
+    api_instance = icasdk.StorageCredentialsApi(api_client)
     storage_credential_id = 'storage_credential_id_example' # str | The ID of the storage credential to share
 
     try:
@@ -356,14 +356,14 @@ When your storage credentials change or get updated due to security reasons you 
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.update_storage_credential_secrets import UpdateStorageCredentialSecrets
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.update_storage_credential_secrets import UpdateStorageCredentialSecrets
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -373,7 +373,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -384,11 +384,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.StorageCredentialsApi(api_client)
+    api_instance = icasdk.StorageCredentialsApi(api_client)
     storage_credential_id = 'storage_credential_id_example' # str | 
-    update_storage_credential_secrets = openapi_client.UpdateStorageCredentialSecrets() # UpdateStorageCredentialSecrets | 
+    update_storage_credential_secrets = icasdk.UpdateStorageCredentialSecrets() # UpdateStorageCredentialSecrets | 
 
     try:
         # Update a storage credential's secrets.

@@ -1,4 +1,4 @@
-# openapi_client.ProjectAnalysisCreationBatchApi
+# icasdk.ProjectAnalysisCreationBatchApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -21,15 +21,15 @@ Create and start multiple analyses in batch.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_creation_batch import AnalysisCreationBatch
-from openapi_client.models.create_analysis_creation_batch import CreateAnalysisCreationBatch
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_creation_batch import AnalysisCreationBatch
+from icasdk.models.create_analysis_creation_batch import CreateAnalysisCreationBatch
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -39,7 +39,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -50,11 +50,11 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisCreationBatchApi(api_client)
+    api_instance = icasdk.ProjectAnalysisCreationBatchApi(api_client)
     project_id = 'project_id_example' # str | 
-    create_analysis_creation_batch = openapi_client.CreateAnalysisCreationBatch() # CreateAnalysisCreationBatch | 
+    create_analysis_creation_batch = icasdk.CreateAnalysisCreationBatch() # CreateAnalysisCreationBatch | 
     idempotency_key = 'idempotency_key_example' # str | The Idempotency-Key header can be used to prevent duplicate requests and support retries. It is implemented according to the IETF spec, with one exception (see below). The header value is allowed to be max 255 characters long. If the header is supplied for a successful response (HTTP status code < 400) then the response  will be saved for 7 days for the specific API endpoint, header value and user reference. When the same user makes  a new request within 7 days to the same API endpoint with the same Idempotency-Key header value, following use cases can occur:<br /><ul><li>the request body is the same as the previous request and an answer is stored => the stored response is returned without executing the request again.</li><li>the request body is the same as the previous request and no answer is stored because the previous request has not finished => 409 error response, which indicates that the original call is still in progress.</li><li>the request body is not the same as the previous request => 422 error response, as this is not allowed.</li></ul>This means that each time when executing a new API request using the Idempotency-Key header, the request has to contain a new header value that hasn't been used (successfully) in the past 7 days for that specific API endpoint and by the specific user. For error responses (HTTP status code >= 400) we allow clients to retry the call. This is where we don't follow the IETF specification. (optional)
 
     try:
@@ -110,14 +110,14 @@ Retrieve a analysis creation batch.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_creation_batch import AnalysisCreationBatch
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_creation_batch import AnalysisCreationBatch
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -127,7 +127,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -138,9 +138,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisCreationBatchApi(api_client)
+    api_instance = icasdk.ProjectAnalysisCreationBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | The ID of the analysis creation batch
 
@@ -208,14 +208,14 @@ Field 'createdAnalysis' changes:
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_creation_batch_item_v4 import AnalysisCreationBatchItemV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_creation_batch_item_v4 import AnalysisCreationBatchItemV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -225,7 +225,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -236,9 +236,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisCreationBatchApi(api_client)
+    api_instance = icasdk.ProjectAnalysisCreationBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | The ID of the analysis creation batch
     item_id = 'item_id_example' # str | The ID of the analysis creation batch item
@@ -308,14 +308,14 @@ For this endpoint multiple versions exist. Note that the values for request head
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_creation_batch_item_paged_list_v4 import AnalysisCreationBatchItemPagedListV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_creation_batch_item_paged_list_v4 import AnalysisCreationBatchItemPagedListV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -325,7 +325,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -336,9 +336,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectAnalysisCreationBatchApi(api_client)
+    api_instance = icasdk.ProjectAnalysisCreationBatchApi(api_client)
     project_id = 'project_id_example' # str | 
     batch_id = 'batch_id_example' # str | The ID of the analysis creation batch
     status = ['status_example'] # List[str] | The statuses to filter on. (optional)

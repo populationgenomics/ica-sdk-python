@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.update_single_metadata_field import UpdateSingleMetadataField
+from icasdk.models.update_single_metadata_field import UpdateSingleMetadataField
 
 # TODO update the JSON string below
 json = "{}"

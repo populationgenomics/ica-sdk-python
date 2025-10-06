@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_cwl_with_json_input_analysis import CreateCwlWithJsonInputAnalysis
+from icasdk.models.create_cwl_with_json_input_analysis import CreateCwlWithJsonInputAnalysis
 
 # TODO update the JSON string below
 json = "{}"

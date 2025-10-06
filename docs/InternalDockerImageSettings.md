@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.internal_docker_image_settings import InternalDockerImageSettings
+from icasdk.models.internal_docker_image_settings import InternalDockerImageSettings
 
 # TODO update the JSON string below
 json = "{}"

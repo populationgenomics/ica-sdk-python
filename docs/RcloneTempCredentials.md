@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.rclone_temp_credentials import RcloneTempCredentials
+from icasdk.models.rclone_temp_credentials import RcloneTempCredentials
 
 # TODO update the JSON string below
 json = "{}"

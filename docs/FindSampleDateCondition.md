@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.find_sample_date_condition import FindSampleDateCondition
+from icasdk.models.find_sample_date_condition import FindSampleDateCondition
 
 # TODO update the JSON string below
 json = "{}"

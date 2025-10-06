@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.nextflow_git_config import NextflowGitConfig
+from icasdk.models.nextflow_git_config import NextflowGitConfig
 
 # TODO update the JSON string below
 json = "{}"

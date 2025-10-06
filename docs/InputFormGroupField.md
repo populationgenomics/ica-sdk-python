@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_form_group_field import InputFormGroupField
+from icasdk.models.input_form_group_field import InputFormGroupField
 
 # TODO update the JSON string below
 json = "{}"

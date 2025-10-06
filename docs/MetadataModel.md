@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.metadata_model import MetadataModel
+from icasdk.models.metadata_model import MetadataModel
 
 # TODO update the JSON string below
 json = "{}"

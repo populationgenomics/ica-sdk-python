@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.inline_view import InlineView
+from icasdk.models.inline_view import InlineView
 
 # TODO update the JSON string below
 json = "{}"

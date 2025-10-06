@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.project_base_table import ProjectBaseTable
+from icasdk.models.project_base_table import ProjectBaseTable
 
 # TODO update the JSON string below
 json = "{}"

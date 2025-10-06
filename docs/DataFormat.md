@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_format import DataFormat
+from icasdk.models.data_format import DataFormat
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.data_url_with_path_list import DataUrlWithPathList
+from icasdk.models.data_url_with_path_list import DataUrlWithPathList
 
 # TODO update the JSON string below
 json = "{}"

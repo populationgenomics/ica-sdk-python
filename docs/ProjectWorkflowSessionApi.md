@@ -1,4 +1,4 @@
-# openapi_client.ProjectWorkflowSessionApi
+# icasdk.ProjectWorkflowSessionApi
 
 All URIs are relative to *https://ica.illumina.com/ica/rest*
 
@@ -22,14 +22,14 @@ Retrieve the configurations of a workflow session.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.workflow_session_configuration_list import WorkflowSessionConfigurationList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.workflow_session_configuration_list import WorkflowSessionConfigurationList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -39,7 +39,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -50,9 +50,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectWorkflowSessionApi(api_client)
+    api_instance = icasdk.ProjectWorkflowSessionApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_session_id = 'workflow_session_id_example' # str | The ID of the workflow session to retrieve the configuration for
 
@@ -108,14 +108,14 @@ Retrieve the inputs of a workflow session.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.workflow_session_input_list import WorkflowSessionInputList
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.workflow_session_input_list import WorkflowSessionInputList
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -125,7 +125,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -136,9 +136,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectWorkflowSessionApi(api_client)
+    api_instance = icasdk.ProjectWorkflowSessionApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_session_id = 'workflow_session_id_example' # str | The ID of the workflow session to retrieve the inputs for
 
@@ -196,14 +196,14 @@ This endpoint only returns V3 items. Use the search endpoint to get V4 items.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.workflow_session_paged_list_v3 import WorkflowSessionPagedListV3
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.workflow_session_paged_list_v3 import WorkflowSessionPagedListV3
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -213,7 +213,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -224,9 +224,9 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectWorkflowSessionApi(api_client)
+    api_instance = icasdk.ProjectWorkflowSessionApi(api_client)
     project_id = 'project_id_example' # str | 
     reference = 'reference_example' # str | The reference to filter on. (optional)
     userreference = 'userreference_example' # str | The user-reference to filter on. (optional)
@@ -298,15 +298,15 @@ Search analyses orchestrated by the workflow session.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_query_parameters import AnalysisQueryParameters
-from openapi_client.models.workflow_session_analysis_paged_list_v4 import WorkflowSessionAnalysisPagedListV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_query_parameters import AnalysisQueryParameters
+from icasdk.models.workflow_session_analysis_paged_list_v4 import WorkflowSessionAnalysisPagedListV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -316,7 +316,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -327,16 +327,16 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectWorkflowSessionApi(api_client)
+    api_instance = icasdk.ProjectWorkflowSessionApi(api_client)
     project_id = 'project_id_example' # str | 
     workflow_session_id = 'workflow_session_id_example' # str | 
     page_offset = 'page_offset_example' # str | [only use with offset-based paging]<br>The amount of rows to skip in the result. Ideally this is a multiple of the size parameter. Offset-based pagination has a result limit of 200K rows and does not guarantee unique results across pages (optional)
     page_token = 'page_token_example' # str | [only use with cursor-based paging]<br>The cursor to get subsequent results. The value to use is returned in the result when using cursor-based pagination. Cursor-based pagination guarantees complete and unique results across all pages. (optional)
     page_size = 'page_size_example' # str | [can be used with both offset- and cursor-based paging]<br>The amount of rows to return. Use in combination with the offset (when using offset-based pagination) or cursor (when using cursor-based pagination) parameter to get subsequent results (optional)
     sort = 'sort_example' # str | [only use with offset-based paging]<br>Which field to order the results by. The default order is ascending, suffix with ' desc' to sort descending (suffix ' asc' also works for ascending). Multiple values should be separated with commas. An example: \"?sort=sortAttribute1, sortAttribute2 desc\"  The attributes for which sorting is supported: - reference - userReference - pipeline - status - startDate - endDate - summary  (optional)
-    analysis_query_parameters = openapi_client.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
+    analysis_query_parameters = icasdk.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
 
     try:
         # Search analyses orchestrated by the workflow session.
@@ -395,15 +395,15 @@ Search workflow sessions.
 * Api Key Authentication (ApiKeyAuth):
 
 ```python
-import openapi_client
-from openapi_client.models.analysis_query_parameters import AnalysisQueryParameters
-from openapi_client.models.workflow_session_paged_list_v4 import WorkflowSessionPagedListV4
-from openapi_client.rest import ApiException
+import icasdk
+from icasdk.models.analysis_query_parameters import AnalysisQueryParameters
+from icasdk.models.workflow_session_paged_list_v4 import WorkflowSessionPagedListV4
+from icasdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://ica.illumina.com/ica/rest
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     host = "https://ica.illumina.com/ica/rest"
 )
 
@@ -413,7 +413,7 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (JWT): JwtAuth
-configuration = openapi_client.Configuration(
+configuration = icasdk.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
@@ -424,15 +424,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with icasdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ProjectWorkflowSessionApi(api_client)
+    api_instance = icasdk.ProjectWorkflowSessionApi(api_client)
     project_id = 'project_id_example' # str | 
     page_offset = 'page_offset_example' # str | [only use with offset-based paging]<br>The amount of rows to skip in the result. Ideally this is a multiple of the size parameter. Offset-based pagination has a result limit of 200K rows and does not guarantee unique results across pages (optional)
     page_token = 'page_token_example' # str | [only use with cursor-based paging]<br>The cursor to get subsequent results. The value to use is returned in the result when using cursor-based pagination. Cursor-based pagination guarantees complete and unique results across all pages. (optional)
     page_size = 'page_size_example' # str | [can be used with both offset- and cursor-based paging]<br>The amount of rows to return. Use in combination with the offset (when using offset-based pagination) or cursor (when using cursor-based pagination) parameter to get subsequent results (optional)
     sort = 'sort_example' # str | [only use with offset-based paging]<br>Which field to order the results by. The default order is ascending, suffix with ' desc' to sort descending (suffix ' asc' also works for ascending). Multiple values should be separated with commas. An example: \"?sort=sortAttribute1, sortAttribute2 desc\"  The attributes for which sorting is supported: - reference - userReference - pipeline - status - startDate - endDate - workflow  (optional)
-    analysis_query_parameters = openapi_client.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
+    analysis_query_parameters = icasdk.AnalysisQueryParameters() # AnalysisQueryParameters |  (optional)
 
     try:
         # Search workflow sessions.

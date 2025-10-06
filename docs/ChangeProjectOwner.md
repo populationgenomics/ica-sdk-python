@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.change_project_owner import ChangeProjectOwner
+from icasdk.models.change_project_owner import ChangeProjectOwner
 
 # TODO update the JSON string below
 json = "{}"

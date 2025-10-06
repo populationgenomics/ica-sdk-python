@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.workflow_session_input_list import WorkflowSessionInputList
+from icasdk.models.workflow_session_input_list import WorkflowSessionInputList
 
 # TODO update the JSON string below
 json = "{}"

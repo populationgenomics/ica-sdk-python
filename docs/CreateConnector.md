@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.create_connector import CreateConnector
+from icasdk.models.create_connector import CreateConnector
 
 # TODO update the JSON string below
 json = "{}"

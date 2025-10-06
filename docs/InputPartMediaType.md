@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.input_part_media_type import InputPartMediaType
+from icasdk.models.input_part_media_type import InputPartMediaType
 
 # TODO update the JSON string below
 json = "{}"
